@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/*////////imagem de fundo direto do css */
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-image: url(./images/background.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/*/ ////////logo*/
+.logo {
+  width: 100px;
+  cursor: pointer; /*jogou  o logo la pra cima escondido */
+}
+
+/*colocou o logo e o button ao lado */
+.navbar {
+  width: 85%;
+  height: 15%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button {
+  color: #fbfcfd;
+  padding: 10px 25px;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* //////////texto principal //////////*/
+.content {
+  color: #fbfcfd;
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+h1 {
+  font-size: 80px;
+  margin: 10px 0 30px;
+  line-height: 80px;
+}
+
+/*///////////////menu do lado////////// */
+.side-bar {
+  width: 50px;
+  height: 100vh;
+  background: linear-gradient(#00545d, #000729);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/*menu*/
+.menu {
+  display: block;
+  width: 25px;
+  margin: 40px auto 0;
+  cursor: pointer;
+}
+
+/* tamanho do menu facebook, insta e tt */
+.social-links img,
+.useful-links img {
+  width: 25px;
+  margin: 5px auto;
+  cursor: pointer;
+}
+
+/*separação das img face, insta e tt do resto */
+.social-links {
+  width: 50px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*deixo o ? e o compartilha no fundo esquerdo do menu*/
+.useful-links {
+  width: 50px;
+  text-align: center;
+  position: absolute;
+  bottom: 30px;
+}
+
+/*//////// bolinhas do fundo /////////*/
+.bubbles img {
+  width: 50px;
+  /*animação */
+  animation: bubble 7s linear infinite;
+}
+
+/*/ // jogou as bolinhas para baixo uma do lado da outra */
+.bubbles {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: -70px;
+}
+
+/*/////////////// animação das bolinhasss :) */
+@keyframes bubble {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-80vh);
+    opacity: 0;
+  }
+}
+
+/*///////// mudar o delay das bolinhas */
+.bubbles img:nth-child(1) {
+  animation-delay: 2s; /*tempo de delay das bolinhas */
+  width: 25px; /*tamanho das bolinhas */
+}
+
+.bubbles img:nth-child(2) {
+  animation-delay: 1s;
+}
+.bubbles img:nth-child(3) {
+  animation-delay: 3s;
+  width: 25px;
+}
+.bubbles img:nth-child(4) {
+  animation-delay: 4.5s;
+}
+.bubbles img:nth-child(5) {
+  animation-delay: 3s;
+}
+.bubbles img:nth-child(6) {
+  animation-delay: 6s;
+  width: 20px;
+}
+.bubbles img:nth-child(7) {
+  animation-delay: 7s;
+  width: 35px;
+}
+
+/*////////////// responsivooooo //////////*/
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 36px;
+    line-height: 50px;
+  }
+  .side-bar {
+    /*deixa no canto esquerdo em baixo */
+    width: 100%;
+    height: 50px;
+    top: auto;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  /*jogou as redes sociais embaixo uma do lado da outra*/
+  .social-links {
+    width: auto;
+    position: unset;
+    transform: none;
+  }
+  .useful-links {
+    width: auto;
+    position: unset;
+  }
+  /*acertou as coisas, separando */
+  .menu {
+    width: 18px;
+    margin: 0;
+  }
+
+  /*imagem */
+  .hero {
+    background-image: linear-gradient(#000e2e, #004f5a);
+  }
+}
+
+@media screen and (max-width: 900px) and (min-width: 600px) {
+  /* add css for tablet screem size */
+}
